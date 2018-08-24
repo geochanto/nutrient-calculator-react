@@ -1,79 +1,81 @@
 import React from 'react';
 import { Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
+import { AvForm, AvField, AvGroup, AvInput } from 'availity-reactstrap-validation';
+import Promise from 'promise-polyfill';
 
 const IngredientForm = props => {
   const { handleInputChange } = props
   const { IngredientName, Calories, Carbs, Sugar, Fat, Protein, hasGluten, isNut, isGMO } = props.state
   return (
-    <Form>
+    <AvForm>
       <Row>
         <Col>
-          <FormGroup>
+          <AvGroup>
             <Label for="IngredientName">Ingredient Name</Label>
-            <Input type="text" name="IngredientName" value={IngredientName} onChange={handleInputChange} />
-          </FormGroup>
+            <AvInput type="text" name="IngredientName" value={IngredientName} onChange={handleInputChange} validate={{required: true}}/>
+          </AvGroup>
         </Col>
         <Col>
 
-          <FormGroup>
+          <AvGroup>
             <Label for="Calories">Calories per oz</Label>
-            <Input type="number" name="Calories" value={Calories} onChange={handleInputChange} />
-          </FormGroup>
+            <AvInput type="number" name="Calories" value={Calories} onChange={handleInputChange}  validate={{required: true, number: true}}/>
+          </AvGroup>
         </Col>
         <Col>
-          <FormGroup>
+          <AvGroup>
             <Label for="Carbs">Carbs per oz</Label>
-            <Input type="number" name="Carbs" value={Carbs} onChange={handleInputChange} />
-          </FormGroup>
+            <AvInput type="number" name="Carbs" value={Carbs} onChange={handleInputChange} validate={{required: true, number: true}}/>
+          </AvGroup>
         </Col>
       </Row>
       <Row>
         <Col>
-          <FormGroup>
+          <AvGroup>
             <Label for="Sugar">Sugar per oz</Label>
-            <Input type="number" name="Sugar" value={Sugar} onChange={handleInputChange} />
-          </FormGroup>
+            <AvInput type="number" name="Sugar" value={Sugar} onChange={handleInputChange} validate={{required: true, number: true}}/>
+          </AvGroup>
         </Col>
         <Col>
-          <FormGroup>
+          <AvGroup>
             <Label for="Fat">Fat per oz</Label>
-            <Input type="number" name="Fat" value={Fat} onChange={handleInputChange} />
-          </FormGroup>
+            <AvInput type="number" name="Fat" value={Fat} onChange={handleInputChange} validate={{required: true, number: true}}/>
+          </AvGroup>
         </Col>
         <Col>
-          <FormGroup>
+          <AvGroup>
             <Label for="Protein">Protein per oz</Label>
-            <Input type="number" name="Protein" value={Protein} onChange={handleInputChange} />
-          </FormGroup>
+            <AvInput type="number" name="Protein" value={Protein} onChange={handleInputChange} validate={{required: true, number: true}}/>
+          </AvGroup>
         </Col>
       </Row>
       <Row>
         <Col md="2">
-          <FormGroup check>
+          <AvGroup check>
             <Label check>
-              <Input type="checkbox" name="hasGluten" checked={hasGluten} onChange={handleInputChange} />
+              <AvInput type="checkbox" name="hasGluten" checked={hasGluten} onChange={handleInputChange}/>
               Has Gluten?
                       </Label>
-          </FormGroup>
+          </AvGroup>
         </Col>
         <Col md="2">
-          <FormGroup check>
+          <AvGroup check>
             <Label check>
-              <Input type="checkbox" name="isNut" checked={isNut} onChange={handleInputChange} />
+              <AvInput type="checkbox" name="isNut" checked={isNut} onChange={handleInputChange} />
               Is a Nut?
                       </Label>
-          </FormGroup>
+          </AvGroup>
         </Col>
         <Col md="2">
-          <FormGroup check>
+          <AvGroup check>
             <Label check>
-              <Input type="checkbox" name="isGMO" checked={isGMO} onChange={handleInputChange} />
+              <AvInput type="checkbox" name="isGMO" checked={isGMO} onChange={handleInputChange} />
               is GMO?
                       </Label>
-          </FormGroup>
+          </AvGroup>
         </Col>
       </Row>
-    </Form>
+    </AvForm>
   )
 }
 
