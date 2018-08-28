@@ -26,11 +26,10 @@ Application will then calculate total nutritional values of each recipe.
 This application can be of great help to small business owners operating juice bars. Considering that juice bar customers tend to be health-focused, it would be beneficial for any such business to be able to easily calculate and provide nutritional information to them.
 
 ## Future Improvements
-1. Finish nutrient calculation route and function to display total nutritional values for each recipe
-2. **Improvement:** integrate USDA Food Composition Databases API to easily add ingredients with pre-filled nutritional values
-3. **Improvement:** create customer login to allow customers to save favorites, customize recipes, etc.
-4. **Improvement:** add online ordering feature
-5. **Improvement:** UI/UX overhaul
+1. **Improvement:** integrate USDA Food Composition Databases API to easily add ingredients with pre-filled nutritional values
+2. **Improvement:** create customer login to allow customers to save favorites, customize recipes, etc.
+3. **Improvement:** add online ordering feature
+4. **Improvement:** UI/UX overhaul
 
 ## Get started
 To get started with this project, do one of the following:
